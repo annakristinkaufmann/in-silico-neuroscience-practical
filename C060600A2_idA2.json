@@ -1,0 +1,38 @@
+{
+"@context": [
+      {
+        "@base": "http://bbp-nexus.epfl.ch/v0/data/bbp/experiment/reconstructedcell/v0.1.0/",
+        "@vocab": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/",
+        "prov": "http://www.w3.org/ns/prov#",
+        "brainLocation": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/brainLocation",
+        "brainRegion": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/brainRegion",
+        "label": "http://www.w3.org/2000/01/rdf-schema#label",
+        "layer": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/layer",
+        "mType": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/mType",
+        "name": "http://schema.org/name",
+        "nsg": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/",
+        "projectName": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/projectName",
+        "spatialCellName": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/spatialCellName"
+      },
+  "https://bbp-nexus.epfl.ch/dev/v0/contexts/nexus/core/standards/v0.1.0"
+  ],
+  "@type": [
+    "prov:Entity",
+    "nsg:ReconstructedCell"
+    ],
+  "brainLocation": {
+      "brainRegion": {
+      "@id": "http://www.FIXME.org/whs_sd_ontology/0000014",
+      "label": "Somatosensory cortex hindlimb layer IV"
+      }
+    },
+  "layer": "L4",
+  "mType": {
+    "@id": "http://www.FIXME.org/cell_ontology/0000122",
+    "label": "Layer IV large basket cell"
+    },
+  "name": "C060600A2_idB2",
+  "projectName": "Maria Toledo Single Cell",
+  "providerId": "C060600A2_idA2",
+  "spatialCellName": "idA2"
+}
