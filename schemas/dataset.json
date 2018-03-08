@@ -1,33 +1,35 @@
 {
   "@context": [
-    "https://bbp-nexus.epfl.ch/staging/v0/contexts/nexus/core/schema/v0.1.0"
+    "https://bbp-nexus.epfl.ch/staging/v0/contexts/neurosciencegraph/core/schema/v0.1.0"
   ],
   "@type": "nxv:Schema",
   "shapes": [
     {
-      "@id": "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/core/dataset/v0.1.0/shapes/:DatasetShape",
+      "@id": "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/experiment/dataset/v0.1.0/shapes/NeuronShape",
       "@type": "sh:NodeShape",
+      "label": "Dataset shape definition",
+      "comment": "Dataset of experiment.",
       "targetClass": "nsg:Dataset",
       "nodeKind": "sh:BlankNodeOrIRI",
       "property": [
         {
           "path": "schema:name",
           "name": "Name",
-          "description": "The dataset name.",
+          "description": "The name of the neuron",
           "datatype": "xsd:string",
           "maxCount": 1
         },
         {
-          "path": "schema:description",
+          "path": "nsg:description",
           "name": "Description",
-          "description": "The dataset description.",
+          "description": "Description of the dataset.",
           "datatype": "xsd:string",
           "maxCount": 1
         },
         {
           "path": "prov:wasDerivedFrom",
           "name": "Was derived from",
-          "description": "The dataset was derived from a neuron.",
+          "description": "The neuron was derived from a subject.",
           "class": "nsg:Neuron",
           "minCount": 1,
           "maxCount": 1
