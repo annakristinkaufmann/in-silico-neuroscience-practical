@@ -1,0 +1,14 @@
+{
+"@context": [
+  "https://bbp-nexus.epfl.ch/staging/v0/contexts/neurosciencegraph/core/data/v0.1.1"
+  ],
+  "@type": [
+    "nsg:Dataset"
+    ],
+  "name": "",
+  "description": "",
+  "wasDerivedFrom": {
+    "@id": "",
+    "@type": ""
+  }
+}

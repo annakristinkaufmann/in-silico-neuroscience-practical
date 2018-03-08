@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://bbp-nexus.epfl.ch/staging/v0/contexts/nexus/core/schema/v0.1.0"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/core/dataset/v0.1.0/shapes/:DatasetShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:Dataset",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
+        {
+          "path": "schema:name",
+          "name": "Name",
+          "description": "The dataset name.",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:description",
+          "name": "Description",
+          "description": "The dataset description.",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "prov:wasDerivedFrom",
+          "name": "Was derived from",
+          "description": "The dataset was derived from a neuron.",
+          "class": "nsg:Neuron",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  ]
+}

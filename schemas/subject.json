@@ -1,0 +1,98 @@
+{
+  "@context": [
+    "https://bbp-nexus.epfl.ch/staging/v0/contexts/neurosciencegraph/core/schema/v0.1.0"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/experiment/subject/v0.1.0/shapes/SubjectShape",
+      "@type": "sh:NodeShape",
+      "label": "Subject shape definition",
+      "comment": "Subject used in experiment.",
+      "targetClass": "nsg:Subject",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
+        {
+          "path": "schema:name",
+          "name": "Name",
+          "description": "The name of the subject",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:species",
+          "name": "Species",
+          "description": "The species of the subject",
+          "datatype": "xsd:string",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:sex",
+          "name": "Sex",
+          "description": "The sex of the subject",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:age",
+          "name": "Age",
+          "description": "The age of the subject.",
+          "node": "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/experiment/subject/v0.1.0/AgeShape",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:weight",
+          "name": "Weight",
+          "description": "The weight of the subject.",
+          "node": "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/experiment/subject/v0.1.0/QuantitativeValueShape",
+          "maxCount": 1
+        }
+      ]
+    },
+    {
+      "@id": "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/experiment/subject/v0.1.0/AgeShape",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "path": "nsg:period",
+          "name": "Period",
+          "in": [
+            "Pre-natal",
+            "Post-natal"
+          ],
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "schema:value",
+          "name": "Age value",
+          "node": "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/experiment/subject/v0.1.0/QuantitativeValueShape",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    },
+    {
+      "@id": "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/experiment/subject/v0.1.0/QuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "path": "schema:value",
+          "name": "Value",
+          "datatype": "xsd:string",
+          "maxCount": 1,
+          "minCount": 1
+        },
+        {
+          "path": "schema:unitText",
+          "name": "Unit",
+          "datatype": "xsd:string",
+          "maxCount": 1,
+          "minCount": 1
+        }
+
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://bbp-nexus.epfl.ch/staging/v0/contexts/neurosciencegraph/core/schema/v0.1.0"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/experiment/neuron/v0.1.0/shapes/NeuronShape",
+      "@type": "sh:NodeShape",
+      "label": "Neuron shape definition",
+      "comment": "Neuron recorded in experiment.",
+      "targetClass": "nsg:Neuron",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
+        {
+          "path": "schema:name",
+          "name": "Name",
+          "description": "The name of the neuron",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:mType",
+          "name": "Morphological type",
+          "description": "The morphological type of the neuron",
+          "datatype": "xsd:string",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:eType",
+          "name": "Electrical type",
+          "description": "The electrical type of the neuron",
+          "datatype": "xsd:string",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "prov:wasDerivedFrom",
+          "name": "Was derived from",
+          "description": "The neuron was derived from a subject.",
+          "class": "nsg:Subject",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  ]
+}
