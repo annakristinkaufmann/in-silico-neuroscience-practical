@@ -29,7 +29,7 @@
         {
           "path": "prov:wasDerivedFrom",
           "name": "Was derived from",
-          "description": "The neuron was derived from a subject.",
+          "description": "The dataset was derived from a neuron.",
           "class": "nsg:Neuron",
           "minCount": 1,
           "maxCount": 1
