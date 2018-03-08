@@ -20,7 +20,7 @@
           "maxCount": 1
         },
         {
-          "path": "nsg:description",
+          "path": "schema:description",
           "name": "Description",
           "description": "Description of the dataset.",
           "datatype": "xsd:string",
